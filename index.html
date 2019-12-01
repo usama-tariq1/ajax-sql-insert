@@ -1,114 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Logico </title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <script
-    src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
-    integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
-    crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
-
-    <script>
-        
-        function openmenu(id){
-            document.getElementById(id).style.height = "auto" ;
-        }
-
-        function closemenu(id){
-            document.getElementById(id).style.height = "0px" ;
-        }
+<form action=""  id="addform" >
+    <label for=""> Date  </label>
     
-       
-
-        // function load(){
-        //     $.ajaxSetup ({
-        //         cache: false
-        //     });
-        //     var ht = "<img src='http://i.imgur.com/pKopwXp.gif' alt='loading...' />";
-        //     var url = "http://localhost/mcq/";
-        //     document.getElementById('result').html(ht).load(url);
-        // }
+    <input type="date" name="date" class="txt"  id="">
     
-    </script>
-
-    <script src="js/app.js"></script>
-
+    <input type="text" name="name" placeholder="Name" class="txt"  id="">
     
+    <input type="text" name="amount" placeholder="Amount" class="txt"  id="">
+    
+    <select class="txt" name="type" id="">
+        <option value="1"> Income  </option>
+        <option value="-1"> Expense  </option>
+    </select>
+
+    <label for=""> Description </label>
+    <textarea name="desc" class="txt" id="" cols="30" rows="10">  </textarea>
 
 
-</head>
-<body>
-    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script>
-
-    <div class="cover">
-            <img src="images/cover.jpg" class="img"  alt="">
-
-    </div>
-    <div class="main">
-        <div class="head">
-            <div class="heading">
-                My Book
-            </div>
-            <div class="searchbar"  >
-                <input type="text" class="input" placeholder="Search " id="myInput"  >
-            </div>
-            <div class="add">
-                <img src="icons/add-icon.ico" class="add-icon" onclick="openmenu('new')"  alt="">
-                <div class="menu" id="new" >
-                    <div class="m-head">
-                        New Transaction <span onclick="closemenu('new')" > &times; </span>
-                    </div>
-                    <div class="body">
-                        <form action=""  id="addform" >
-                        <label for=""> Date  </label>
-                        <input type="date" name="date" class="txt"  id="">
-                        <input type="text" name="name" placeholder="Name" class="txt"  id="">
-                        <input type="text" name="amount" placeholder="Amount" class="txt"  id="">
-                        <select class="txt" name="type" id="">
-                            <option value="1"> Income  </option>
-                            <option value="-1"> Expense  </option>
-                        </select>
-                        
-                        <label for=""> Description </label>
-                        <textarea name="desc" class="txt" id="" cols="30" rows="10">  </textarea>
-
-                    
-                        </form>
-                        <button class="btn btn-success " id="save"   style="display: block ; margin:0 auto;"  > ADD </button>
-
-                    
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="result" id="result">
-            
-        </div>
-    </div>
-    <script>
-        $(document).ready(function(){
-          $("#myInput").on("keyup", function() {
-            var value = $(this).val().toLowerCase();
-            $("#myTable tr").filter(function() {
-              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
-          });
-        });
-    </script>
-</body>
-</html>
+</form>
+<button class="btn btn-success " id="save"     > ADD </button>
