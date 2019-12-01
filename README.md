@@ -2,5 +2,6 @@
 Insert data in SQL with Minimum Ajax JQuery
 
 
+Demo 
+http://1337worm.com/logico
 
-<button> Edit </button>
