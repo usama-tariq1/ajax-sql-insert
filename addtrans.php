@@ -2,7 +2,14 @@
 
 
 
-    include "link.php";
+    $host = "localhost";
+    $un = "root";
+    $pwd = "";
+    $db = "logico";
+
+
+    $link = mysqli_connect($host , $un , $pwd , $db) or die ("Connection Error");
+    
 
 
     $name = $_POST['name'];
