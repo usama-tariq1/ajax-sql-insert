@@ -7,7 +7,7 @@ $(document).on('click','#save',function(e) {
            type: "post",
            url: "db/addtrans.php",
            success: function(data){
-               reload();
+               
                alert ("New Transaction: " +data);
                 
            }
